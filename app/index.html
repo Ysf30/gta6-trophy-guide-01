@@ -3,23 +3,87 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GTA VI trophy checklist</title>
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<meta name="description" content="Offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: official names, descriptions and grades, a checklist, a platinum roadmap, missable flags and a cited guide for every trophy.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>GTA VI trophy checklist</h1>
-  <p id="progress">0 of 55 earned</p>
+<header class="masthead">
+  <div class="masthead-text">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
+    <h1>Leonida Legend</h1>
+    <p class="lede">The complete trophy guide and tracker for GTA VI: every official trophy, a checklist that saves in your browser, a road to the platinum, and a guide for each trophy in our own words, with its sources named.</p>
+  </div>
+  <div class="progress-card" aria-label="Progress">
+    <p class="progress-big" id="progressText">0 of 55 earned</p>
+    <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+    <p class="progress-sub" id="progressSub">Platinum 0/1 &middot; Gold 0/2 &middot; Silver 0/6 &middot; Bronze 0/46</p>
+    <p class="progress-sub" id="progressLeft">55 to go — start with the story.</p>
+  </div>
 </header>
-<div class="controls">
-  <label>Grade <select id="grade"><option value="all">All</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select></label>
-  <button id="export" type="button">Export progress</button>
-  <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
-</div>
-<table>
-  <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>How to get it</th></tr></thead>
-  <tbody id="rows"></tbody>
-</table>
+
+<main>
+  <section class="panel controls" aria-label="Tracker controls">
+    <div class="control-row">
+      <label class="search-label">Search <input id="search" type="search" placeholder="Trophy, mission or keyword…" autocomplete="off"></label>
+      <label>Grade
+        <select id="gradeFilter">
+          <option value="all">All grades</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label>Show
+        <select id="earnedFilter">
+          <option value="all">All trophies</option>
+          <option value="earned">Earned only</option>
+          <option value="missing">Not earned yet</option>
+        </select>
+      </label>
+      <label class="spoiler-label"><input id="spoilerToggle" type="checkbox"> Spoiler-safe mode — hide story trophies until earned</label>
+    </div>
+    <div class="control-row kind-row" id="kindChips" role="group" aria-label="Filter by kind">
+      <button type="button" data-kind="all" class="chip active">All kinds</button>
+      <button type="button" data-kind="story" class="chip">Story</button>
+      <button type="button" data-kind="missable" class="chip">Missable</button>
+      <button type="button" data-kind="collectibles" class="chip">Collectibles</button>
+      <button type="button" data-kind="activities" class="chip">Activities</button>
+      <button type="button" data-kind="online" class="chip">Online</button>
+    </div>
+    <div class="control-row">
+      <button id="exportBtn" type="button">Export progress</button>
+      <label class="import-label">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
+      <button id="resetBtn" type="button" class="quiet">Reset progress</button>
+      <p class="hint">Progress is saved in this browser only. Export a file to keep a backup or move it to another browser.</p>
+    </div>
+    <p class="count-line" id="countLine">Showing 55 of 55 trophies.</p>
+  </section>
+
+  <section class="panel missable-panel" aria-label="Missable trophies">
+    <h2>Do not miss these</h2>
+    <p>GTA VI has no mission replay and no New Game Plus, so keep a manual save at the start of every chapter and one untouched save from just before the final mission. The game has 15 manual save slots plus one autosave. Cheats switch trophies and saving off, so keep them away from your trophy save.</p>
+    <ul id="missableList" class="missable-list"></ul>
+  </section>
+
+  <section class="panel roadmap-panel" aria-label="Roadmap to the platinum">
+    <h2>Road to the platinum</h2>
+    <p class="roadmap-intro">Finish the story first, then the side stories, then the one-off partner and robbery trophies, then the collectibles and the long grind, and finish with the 100% cleanup. Around 200 hours in total; the story alone is about 60.</p>
+    <ol id="roadmap" class="roadmap"></ol>
+  </section>
+
+  <section aria-label="Trophy list">
+    <h2 class="list-heading">All 55 trophies</h2>
+    <p class="list-note">Names, descriptions and grades are shown exactly as PlayStation publishes them. Tap any trophy to open its guide and sources.</p>
+    <div id="trophyList" class="trophy-list"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Unofficial fan guide. Grand Theft Auto VI is developed and published by Rockstar Games; this guide is not affiliated with or endorsed by Rockstar. Trophy names, descriptions and grades are the official list as reported from Exophase and cross-checked with PSNProfiles on 18 November 2026. Guide text is written for this page and cites its sources beside each trophy. This app works fully offline: it loads nothing from the network.</p>
+  <p>Sources for the list and the methods: <a href="https://www.planetgta6.com/en/gta-6-trophies/">Planet GTA 6 — GTA 6 Trophies</a> &middot; <a href="https://outputlag.com/guides/gta-6-trophy-list/">Output Lag — GTA 6 Trophy List</a> &middot; <a href="https://all.gg/news/every-gta-6-psn-trophy/">all.gg — Every GTA 6 PSN Trophy</a></p>
+</footer>
 <script type="module" src="app.js"></script>
 </body>
 </html>

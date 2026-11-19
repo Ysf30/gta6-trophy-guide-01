@@ -1,7 +1,170 @@
-body { font-family: Arial, sans-serif; margin: 24px; color: #222; }
-header { display: flex; justify-content: space-between; align-items: baseline; }
-.controls { display: flex; gap: 16px; margin: 12px 0; align-items: center; }
-.import input { font-size: 12px; }
-table { border-collapse: collapse; width: 100%; }
-th, td { border-bottom: 1px solid #ddd; padding: 6px 8px; text-align: left; vertical-align: top; white-space: pre-line; }
-th { background: #f2f2f2; }
+/* Leonida Legend — a Vice City dusk look of its own: deep plum, hot pink and teal. */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+  color: #f2edff;
+  background: linear-gradient(180deg, #171226 0%, #241631 55%, #171226 100%);
+  line-height: 1.45;
+}
+a { color: #7fe3d0; }
+h1, h2, h3 { line-height: 1.2; margin: 0; }
+p { margin: 0; }
+
+/* Header */
+.masthead {
+  display: flex;
+  gap: 32px;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 36px 24px 8px;
+}
+.kicker { color: #ff8fb0; letter-spacing: 0.12em; text-transform: uppercase; font-size: 12px; font-weight: 700; }
+.masthead h1 { font-size: 52px; letter-spacing: -0.02em; margin: 6px 0 10px; }
+.lede { color: #d9cff0; font-size: 17px; max-width: 560px; }
+.progress-card {
+  flex: 0 0 300px;
+  background: #2b2140;
+  border: 1px solid #4a3a6b;
+  border-radius: 14px;
+  padding: 18px 20px;
+}
+.progress-big { font-size: 26px; font-weight: 800; }
+.progress-track { height: 12px; background: #171226; border-radius: 6px; margin: 10px 0; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, #ff5c8a, #ffb347 55%, #2dd4bf); border-radius: 6px; transition: width 0.25s ease; }
+.progress-sub { color: #cfc4ea; font-size: 13px; margin-top: 4px; }
+
+/* Main layout */
+main { max-width: 1120px; margin: 0 auto; padding: 20px 24px 8px; }
+.panel {
+  background: #221a33;
+  border: 1px solid #453768;
+  border-radius: 14px;
+  padding: 18px 20px;
+  margin-bottom: 20px;
+}
+.panel h2 { font-size: 22px; margin-bottom: 8px; }
+
+/* Controls */
+.control-row { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-bottom: 12px; }
+.control-row:last-child { margin-bottom: 0; }
+label { font-size: 14px; color: #d9cff0; }
+input[type="search"], select {
+  background: #171226;
+  color: #f2edff;
+  border: 1px solid #5b4a85;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+input[type="search"] { width: 280px; }
+button, .import-label {
+  background: #ff5c8a;
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 9px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+button:hover, .import-label:hover { filter: brightness(1.12); }
+button.quiet { background: transparent; border: 1px solid #5b4a85; color: #d9cff0; }
+.chip { background: #171226; border: 1px solid #5b4a85; color: #d9cff0; }
+.chip.active { background: #2dd4bf; border-color: #2dd4bf; color: #08211d; }
+.import-label input { display: none; }
+.hint { font-size: 13px; color: #b7a9d8; }
+.count-line { font-size: 13px; color: #b7a9d8; margin-top: 4px; }
+.spoiler-label { display: flex; gap: 8px; align-items: center; font-weight: 600; }
+.spoiler-label input { width: 18px; height: 18px; accent-color: #ff5c8a; }
+
+/* Missable */
+.missable-panel { border-color: #ff5c8a; background: #2e1a2e; }
+.missable-panel p { color: #f0d7e2; margin-bottom: 10px; }
+.missable-list { margin: 0; padding-left: 20px; }
+.missable-list li { margin-bottom: 6px; }
+.missable-list strong { color: #ffb347; }
+
+/* Roadmap */
+.roadmap-intro { color: #d9cff0; margin-bottom: 14px; }
+.roadmap { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.roadmap-stage { background: #171226; border: 1px solid #453768; border-radius: 10px; padding: 14px 16px; }
+.roadmap-head { display: flex; justify-content: space-between; align-items: baseline; }
+.roadmap-head h3 { font-size: 16px; }
+.roadmap-count { font-weight: 800; color: #2dd4bf; }
+.roadmap-stage p { color: #cfc4ea; font-size: 14px; margin: 6px 0 10px; }
+.roadmap-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.mini-chip {
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 20px;
+  background: #2b2140;
+  border: 1px solid #5b4a85;
+  color: #e6defa;
+}
+.mini-chip.done { background: #14332e; border-color: #2dd4bf; color: #a7f3e8; text-decoration: line-through; }
+
+/* Trophy list */
+.list-heading { font-size: 24px; margin: 8px 0 4px; }
+.list-note { color: #cfc4ea; margin-bottom: 14px; }
+.trophy-list { display: grid; gap: 10px; }
+.trophy-card {
+  background: #221a33;
+  border: 1px solid #453768;
+  border-left: 6px solid #8a7bb3;
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+.trophy-card.grade-platinum { border-left-color: #8be9ff; }
+.trophy-card.grade-gold { border-left-color: #ffd54a; }
+.trophy-card.grade-silver { border-left-color: #d7dee8; }
+.trophy-card.grade-bronze { border-left-color: #e09a5f; }
+.trophy-card.earned { background: #1d2b26; border-color: #2dd4bf; }
+.trophy-card.masked { opacity: 0.85; }
+.trophy-head { display: flex; gap: 12px; align-items: flex-start; }
+.trophy-head input[type="checkbox"] { width: 22px; height: 22px; margin-top: 2px; accent-color: #2dd4bf; flex: 0 0 auto; cursor: pointer; }
+.trophy-titles { flex: 1 1 auto; min-width: 0; }
+.trophy-titles h3 { font-size: 17px; }
+.trophy-desc { color: #cfc4ea; font-size: 14px; margin-top: 2px; }
+.trophy-badges { display: flex; flex-wrap: wrap; gap: 6px; flex: 0 0 230px; justify-content: flex-end; }
+.badge {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 20px;
+  background: #171226;
+  color: #e6defa;
+  border: 1px solid #5b4a85;
+  white-space: nowrap;
+}
+.badge.grade-platinum { color: #8be9ff; border-color: #8be9ff; }
+.badge.grade-gold { color: #ffd54a; border-color: #ffd54a; }
+.badge.grade-silver { color: #e8edf3; border-color: #d7dee8; }
+.badge.grade-bronze { color: #f2b98a; border-color: #e09a5f; }
+.badge.missable-badge { background: #ff5c8a; border-color: #ff5c8a; color: #fff; }
+.badge.hidden-badge { background: #4a3a6b; }
+.guide-toggle { background: transparent; border: 1px solid #5b4a85; color: #d9cff0; flex: 0 0 auto; padding: 7px 10px; }
+.trophy-guide { margin-top: 12px; padding-top: 12px; border-top: 1px solid #453768; }
+.trophy-guide p { margin-bottom: 8px; font-size: 15px; }
+.missable-note { color: #ffb347; font-weight: 700; }
+.trophy-meta { color: #b7a9d8; font-size: 13px; }
+.trophy-sources { color: #b7a9d8; font-size: 13px; }
+.empty-note { color: #cfc4ea; background: #221a33; border: 1px solid #453768; border-radius: 10px; padding: 16px; }
+
+/* Footer */
+footer {
+  max-width: 1120px;
+  margin: 8px auto 0;
+  padding: 20px 24px 36px;
+  color: #a99cc9;
+  font-size: 13px;
+}
+footer p { margin-bottom: 8px; }
+
+/* Keyboard focus stays visible on the dark theme. */
+:focus-visible { outline: 3px solid #2dd4bf; outline-offset: 2px; }
+.guide-toggle:disabled { opacity: 0.55; cursor: default; }
