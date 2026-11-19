@@ -4,7 +4,7 @@
 [![rank](https://make.fun/badge/gta6-trophy-guide-01/Ysf30/gta6-trophy-guide-01/rank.svg)](https://make.fun/bounty/gta6-trophy-guide-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
 [![reward](https://make.fun/badge/gta6-trophy-guide-01/Ysf30/gta6-trophy-guide-01/reward.svg)](https://make.fun/bounty/gta6-trophy-guide-01?utm_source=github&utm_medium=readme&utm_campaign=gta6-trophy-guide-01)
 
-Leonida Legend is an offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI. Every trophy is shown with its official name, description and grade, plus a guide written for this page that names its sources, a checklist that saves in the browser, export and import, filters by kind and grade, a spoiler-safe mode that hides story trophies until they are earned, a five-stage road to the platinum, and flags on the missable trophies. The list is the official one as reported from Exophase and cross-checked with PSNProfiles; the methods come from launch-week guides, cited beside each trophy.
+Leonida Legend is an offline guide and tracker for the 55 PlayStation 5 trophies of Grand Theft Auto VI. Each trophy appears with its official name, description and grade, a guide written for this page that names its sources, and a checklist that saves in the browser. Filters cover kind and grade, a spoiler-safe mode keeps story trophies hidden until they are earned, a five-stage roadmap leads to the platinum, and the two missable trophies are flagged wherever they appear. The trophy list is the official one as reported from Exophase and cross-checked with PSNProfiles; the methods come from launch-week guides, cited beside each trophy.
 
 ## What is inside
 

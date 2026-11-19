@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
-<meta name="description" content="Offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: official names, descriptions and grades, a checklist, a platinum roadmap, missable flags and a cited guide for every trophy.">
+<meta name="description" content="Offline guide and tracker for all 55 PlayStation 5 trophies of Grand Theft Auto VI: official names, descriptions and grades, a saved checklist, a platinum roadmap, missable warnings and a cited guide for every trophy.">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,18 +12,20 @@
   <div class="masthead-text">
     <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies</p>
     <h1>Leonida Legend</h1>
-    <p class="lede">The complete trophy guide and tracker for GTA VI: every official trophy, a checklist that saves in your browser, a road to the platinum, and a guide for each trophy in our own words, with its sources named.</p>
+    <p class="lede">Every GTA VI trophy in one place: the official list, a checklist that remembers your progress, the road to the platinum, and a guide for each trophy written for this page, with the sources it draws on.</p>
   </div>
   <div class="progress-card" aria-label="Progress">
     <p class="progress-big" id="progressText">0 of 55 earned</p>
     <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
     <p class="progress-sub" id="progressSub">Platinum 0/1 &middot; Gold 0/2 &middot; Silver 0/6 &middot; Bronze 0/46</p>
-    <p class="progress-sub" id="progressLeft">55 to go — start with the story.</p>
+    <p class="progress-sub" id="progressKinds">Story 0/20 &middot; Collectibles 0/6 &middot; Activities 0/29</p>
+    <p class="progress-sub" id="progressLeft">55 to go — the story comes first.</p>
   </div>
 </header>
 
 <main>
   <section class="panel controls" aria-label="Tracker controls">
+    <p class="controls-intro">Tick a trophy off as you earn it and it stays ticked in this browser. Use the filters to find what is left, and spoiler-safe mode to keep the story a surprise.</p>
     <div class="control-row">
       <label class="search-label">Search <input id="search" type="search" placeholder="Trophy, mission or keyword…" autocomplete="off"></label>
       <label>Grade
@@ -56,26 +58,26 @@
       <button id="exportBtn" type="button">Export progress</button>
       <label class="import-label">Import progress <input id="importFile" type="file" accept="application/json,.json"></label>
       <button id="resetBtn" type="button" class="quiet">Reset progress</button>
-      <p class="hint">Progress is saved in this browser only. Export a file to keep a backup or move it to another browser.</p>
+      <p class="hint">Progress lives in this browser only. Export a file to keep a backup or move it to another browser.</p>
     </div>
     <p class="count-line" id="countLine">Showing 55 of 55 trophies.</p>
   </section>
 
   <section class="panel missable-panel" aria-label="Missable trophies">
     <h2>Do not miss these</h2>
-    <p>GTA VI has no mission replay and no New Game Plus, so keep a manual save at the start of every chapter and one untouched save from just before the final mission. The game has 15 manual save slots plus one autosave. Cheats switch trophies and saving off, so keep them away from your trophy save.</p>
+    <p>There is no mission replay and no New Game Plus in GTA VI, so keep a manual save at the start of every chapter and one untouched save from just before the final mission. The game has 15 manual save slots plus one autosave. Cheats switch trophies and saving off, so keep them away from your trophy save.</p>
     <ul id="missableList" class="missable-list"></ul>
   </section>
 
   <section class="panel roadmap-panel" aria-label="Roadmap to the platinum">
     <h2>Road to the platinum</h2>
-    <p class="roadmap-intro">Finish the story first, then the side stories, then the one-off partner and robbery trophies, then the collectibles and the long grind, and finish with the 100% cleanup. Around 200 hours in total; the story alone is about 60.</p>
+    <p class="roadmap-intro">Story first, then the side stories, then the one-off partner and robbery trophies, then the collectibles and the long grind, and the 100% cleanup last. Around 200 hours in total; the story alone is about 60.</p>
     <ol id="roadmap" class="roadmap"></ol>
   </section>
 
   <section aria-label="Trophy list">
     <h2 class="list-heading">All 55 trophies</h2>
-    <p class="list-note">Names, descriptions and grades are shown exactly as PlayStation publishes them. Tap any trophy to open its guide and sources.</p>
+    <p class="list-note">Names, descriptions and grades are shown exactly as PlayStation publishes them. Open any trophy to read its guide and sources.</p>
     <div id="trophyList" class="trophy-list"></div>
   </section>
 </main>
